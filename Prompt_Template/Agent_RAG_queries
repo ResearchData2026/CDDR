@@ -1,0 +1,54 @@
+AGENT_QUERIES = {
+    "material_design": [
+        "ease quality recycling recyclable materials component coding Annex I (d)",
+        "substances concern hazardous presence concentration end-of-life Annex I (f)",
+        "recycled materials content quality material coding standards Annex I (h)",
+        "sustainable renewable materials content Annex I (i)",
+        "weight volume product packaging lightweight Annex I (j)",
+        "incorporation used components Annex I (k)",
+        "environmental footprint life cycle assessment impact categories Annex I (m)",
+        "material footprint product Annex I (o)",
+        "lightweight design material reduction load optimisation Annex I (t)",
+    ],
+    "manufacture": [
+        "energy water resources consumption production manufacturing efficiency Annex I (g)",
+        "environmental footprint manufacturing life cycle assessment Annex I (m)",
+        "microplastic nanoplastic release manufacturing production Annex I (p)",
+        "emissions air water soil production noise Annex I (q)",
+        "waste generated plastic packaging hazardous production Annex I (r)",
+    ],
+    "in_service": [
+        "durability reliability lifetime failures resistance ageing Annex I (a)",
+        "repair maintenance spare parts modularity tools instructions Annex I (b)",
+        "energy water resources consumption use phase efficiency Annex I (g)",
+        "consumables spare parts availability affordability instructions Annex I (l)",
+        "environmental footprint use phase life cycle assessment Annex I (m)",
+        "microplastic nanoplastic release use stage Annex I (p)",
+        "emissions air water soil use stage noise Annex I (q)",
+        "waste generated use phase plastic hazardous Annex I (r)",
+        "functional performance intended use compatibility conditions Annex I (s)",
+    ],
+    "circularity": [
+        "upgrading reuse remanufacturing refurbishment modularity spare parts Annex I (c)",
+        "recycling disassembly recyclable materials recovery process Annex I (d)",
+        "avoidance solutions detrimental reuse recycling recovery Annex I (e)",
+        "energy water resources end-of-life treatment efficiency Annex I (g)",
+        "environmental footprint end-of-life treatment life cycle Annex I (m)",
+        "microplastic nanoplastic release end-of-life Annex I (p)",
+        "waste end-of-life plastic packaging hazardous Annex I (r)",
+    ],
+    "chief_designer": [
+        # From Recital (1) and Article 1 — legislative purpose
+        "objectives ecodesign sustainable products environmental performance",
+        # From Article 5 — what manufacturers must demonstrate
+        "ecodesign requirements product parameters delegated acts obligations",
+        # From Annex I introduction — how parameters relate to each other
+        "product parameters significant environmental impacts lifecycle stages",
+        # From Article 7 — Digital Product Passport
+        "Digital Product Passport information requirements Article 7",
+        # From Annex I preamble — parameter priority logic
+        "most significant environmental impact product lifecycle assessment",
+        # From Article 4 — placing on market obligations
+        "placing on market making available obligations conformity"
+    ],
+}
