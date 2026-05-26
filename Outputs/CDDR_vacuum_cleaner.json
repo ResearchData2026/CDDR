@@ -1,0 +1,127 @@
+{
+  "product": "vacuum cleaner",
+  "decisions": [
+    {
+      "decision_type": "Housing material and structure",
+      "options_evaluated": [
+        "High-impact thick-walled virgin polymer housing",
+        "Recycled-content monomaterial polypropylene (rPP) with structural ribbing",
+        "Fiber-reinforced composite housing"
+      ],
+      "agents_in_conflict": [
+        "In-Service Agent",
+        "Circularity Agent"
+      ],
+      "conflict": "In-Service Agent recommends high-impact thick-walled virgin polymers for durability; Circularity Agent rejects this, recommending a monomaterial polymer to maximize recycling quality.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (a), page 79: durability and reliability of the product or its components",
+        "ESPR 2024/1781 Annex I (h), page 79: use or content of recycled materials",
+        "ESPR 2024/1781 Annex I (t), page 80: lightweight design through reduction of material consumption and load-optimisation",
+        "ESPR 2024/1781 Annex I (p), page 80: microplastic and nanoplastic release during relevant product life cycle stages"
+      ],
+      "chief_resolution": "Recycled-content monomaterial polypropylene (rPP) with structural ribbing. This balances durability requirements under ESPR Annex I (a) with recycled content under (h) and lightweight design under (t) by using structural ribbing to compensate for rPP's lower tensile strength.",
+      "design_action": "Investigate the availability of high-purity recycled polypropylene streams and verify if their mechanical properties can meet the structural requirements of the housing when reinforced with ribbing."
+    },
+    {
+      "decision_type": "Joining and assembly method",
+      "options_evaluated": [
+        "Permanent chemical adhesives or ultrasonic welding",
+        "Reversible mechanical fasteners (standardized screws and snap-fits)",
+        "Threaded fasteners with molded-in metal inserts"
+      ],
+      "agents_in_conflict": [
+        "In-Service Agent",
+        "Circularity Agent"
+      ],
+      "conflict": "In-Service Agent recommends threaded fasteners with metal inserts to ensure robust repairability; Circularity Agent rejects this because molded-in metal inserts contaminate the plastic recycling stream, hindering high-purity material recovery.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (b), page 79: ease of repair and maintenance, including ease of non-destructive disassembly",
+        "ESPR 2024/1781 Annex I (d), page 79: design for recycling, ease and quality of recycling, and high-purity sorting",
+        "ESPR 2024/1781 Annex I (e), page 79: avoidance of technical solutions detrimental to recycling of products and components"
+      ],
+      "chief_resolution": "Reversible mechanical fasteners (standardized screws and snap-fits) without molded-in metal inserts. This satisfies the ease of repair and maintenance under ESPR Annex I (b) while ensuring high-quality recycling and material recovery under (d) and (e) by avoiding inseparable metal-to-plastic joints.",
+      "design_action": "Confirm the compatibility of standardized screw sizes across all internal components and investigate the feasibility of snap-fit geometries that can be disassembled using common household tools."
+    },
+    {
+      "decision_type": "Motor and actuator technology",
+      "options_evaluated": [
+        "High-efficiency brushless DC (BLDC) motor with rare-earth magnets",
+        "Synchronous reluctance motor (no rare-earth magnets)",
+        "Modular brushless DC motor with easily removable magnets"
+      ],
+      "agents_in_conflict": [
+        "Manufacture Agent",
+        "In-Service Agent"
+      ],
+      "conflict": "Manufacture Agent recommends a synchronous reluctance motor to avoid the toxic emissions and energy-intensive extraction of rare-earth magnets; In-Service Agent recommends a high-efficiency brushless DC (BLDC) motor to maximize use-phase energy efficiency.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (g), page 79: use or consumption of energy, water and other resources in one or more life cycle stages",
+        "ESPR 2024/1781 Annex I (d), page 79: design for recycling, ease and quality of recycling",
+        "ESPR 2024/1781 Annex I (q), page 80: emissions to air, water or soil released in one or more lifecycle stages"
+      ],
+      "chief_resolution": "High-efficiency brushless DC (BLDC) motor designed with easily removable/separable rare-earth magnets and recycled copper windings. This prioritizes use-phase energy efficiency under ESPR Annex I (g) as a major environmental footprint driver, while satisfying circularity under (d) by ensuring the magnets can be easily extracted before shredding.",
+      "design_action": "Investigate the supply chain viability for sourcing modular BLDC motors with magnetically separable rotors and verify the recycling efficiency of their rare-earth elements."
+    },
+    {
+      "decision_type": "Thermal management approach",
+      "options_evaluated": [
+        "Active cooling fan integrated into motor shaft",
+        "Oversized passive heat sinks with dedicated ventilation ducts",
+        "Removable/washable open-cell foam filters and heatsinks"
+      ],
+      "agents_in_conflict": [
+        "Manufacture Agent",
+        "In-Service Agent"
+      ],
+      "conflict": "Manufacture Agent recommends an active cooling fan integrated into the motor shaft to minimize manufacturing waste and material use; In-Service Agent recommends oversized passive heat sinks with dedicated ventilation ducts to eliminate moving parts and maximize reliability.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (a), page 79: durability and reliability of the product or its components",
+        "ESPR 2024/1781 Annex I (t), page 80: lightweight design through reduction of material consumption and load-optimisation",
+        "ESPR 2024/1781 Annex I (g), page 79: use or consumption of energy, water and other resources"
+      ],
+      "chief_resolution": "Passive cooling via optimized airflow channels using the vacuum's existing working airflow, combined with removable/washable filters and lightweight aluminum fins. This satisfies lightweight design under ESPR Annex I (t) by integrating functions (using working airflow for cooling) while avoiding the reliability risks of an active fan, thereby supporting durability under (a).",
+      "design_action": "Investigate the thermal dissipation requirements of the selected motor and confirm whether the working airflow of the vacuum is sufficient to cool the motor under maximum load without active fans."
+    },
+    {
+      "decision_type": "Modularity and repairability architecture",
+      "options_evaluated": [
+        "Highly integrated monolithic design",
+        "Semi-modular design with standard fasteners for wear-and-tear parts",
+        "Highly modular architecture with toolless component swap"
+      ],
+      "agents_in_conflict": [
+        "Manufacture Agent",
+        "Circularity Agent"
+      ],
+      "conflict": "Manufacture Agent recommends a highly integrated monolithic design to simplify assembly and reduce production waste; Circularity Agent recommends a highly modular architecture with toolless component swap to facilitate repair, upgrading, and recycling.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (b), page 79: ease of repair and maintenance, modularity, and use of standard components",
+        "ESPR 2024/1781 Annex I (c), page 79: ease of upgrading, reuse, remanufacturing and refurbishment",
+        "ESPR 2024/1781 Annex I (j), page 80: weight and volume of the product and its packaging"
+      ],
+      "chief_resolution": "Semi-modular architecture with standardized fasteners for key functional blocks (motor, cord, filters). This balances ease of repair and maintenance under ESPR Annex I (b) with weight, volume, and material footprint constraints under (j) and (o) by avoiding the excessive material overhead of fully toolless modular connectors.",
+      "design_action": "Investigate the optimal partitioning of functional modules (motor, cord, filter) to balance ease of repair with the complexity of internal electrical connections."
+    },
+    {
+      "decision_type": "Power source and energy delivery",
+      "options_evaluated": [
+        "Corded mains power with automatic cord reel",
+        "Corded mains power with manual cord wrap",
+        "Removable and standardized Li-ion battery pack",
+        "Integrated non-removable Li-ion battery pack"
+      ],
+      "agents_in_conflict": [
+        "In-Service Agent",
+        "Circularity Agent"
+      ],
+      "conflict": "In-Service Agent recommends an automatic cord reel for user convenience and cable protection; Circularity Agent rejects this because the complex reel mechanism contains mixed materials (steel spring, copper contacts, plastic spool) that are difficult to disassemble and recycle.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (d), page 79: design for recycling, ease and quality of recycling",
+        "ESPR 2024/1781 Annex I (a), page 79: durability and reliability of the product or its components",
+        "ESPR 2024/1781 Annex I (r), page 80: amounts of waste generated, including plastic waste and packaging waste"
+      ],
+      "chief_resolution": "Corded mains power connection with a manual, integrated cord-wrap structure on the housing instead of an automatic mechanical cord reel. This eliminates hazardous battery waste under ESPR Annex I (r) and avoids the complex, unrecyclable mechanical reel mechanism to satisfy design for recycling under (d), while still providing cable management to protect the cord and maintain durability under (a).",
+      "design_action": "Investigate user preferences regarding manual cord storage versus automatic reels, and verify the safety and regulatory standards for manual cord-wrap designs in the target markets."
+    }
+  ]
+}
