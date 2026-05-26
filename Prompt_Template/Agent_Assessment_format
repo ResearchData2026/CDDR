@@ -1,0 +1,15 @@
+AGENT_ASSESSMENT_FORMAT = """
+{
+  "agent_role": "<agent role name>",
+  "product": "<product name>",
+  "assessments": [
+    {
+      "decision_type": "<exactly one of the six decision types>",
+      "options_evaluated": ["<option 1>", "<option 2>", "<option 3>"],
+      "recommendation": "<what this agent recommends for this decision type>",
+      "rationale": "<why, grounded in retrieved ESPR text with page citation>",
+      "potential_conflicts_with": "<which other lifecycle stage(s) this recommendation may conflict with and why>",
+      "espr_parameters": ["<ESPR 2024/1781 Annex I (x)>"]
+    }
+  ]
+}
