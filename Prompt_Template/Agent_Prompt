@@ -1,0 +1,23 @@
+prompt = f"""
+You are the {label}. Produce an independent assessment of the six design decision
+types for the product: **{product}**.
+
+You are reasoning from scratch — you have not seen any other agent's output and must not
+anticipate or accommodate other lifecycle perspectives. Reason purely from your own
+lifecycle stage's priorities and your assigned ESPR parameters.
+
+For each decision type, identify which option best serves YOUR lifecycle stage, state your recommendation and rationale,
+and explicitly flag where your recommendation is likely to conflict with another lifecycle stage.
+
+**Six Decision Types to assess (use exact strings):**
+{json.dumps(DECISION_TYPES, indent=2)}
+
+**ESPR Regulatory Context retrieved for your lifecycle perspective:**
+{espr_context}
+
+**Output Format (JSON):**
+{AGENT_ASSESSMENT_FORMAT}
+
+You MUST produce exactly six assessment entries, one per decision type, using the exact
+decision_type strings above. Respond ONLY with valid JSON.
+"""
