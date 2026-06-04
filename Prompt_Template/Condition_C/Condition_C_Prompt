@@ -1,0 +1,66 @@
+prompt = f"""
+You are the {label}. Produce an independent assessment of the six design decision
+types for the product: **{product}**.
+
+You are reasoning from scratch — you have not seen any other agent's output and must not
+anticipate or accommodate other lifecycle perspectives. Reason purely from your own
+lifecycle stage's priorities and your assigned ESPR parameters.
+
+For each decision type, identify which option best serves YOUR lifecycle stage, state your recommendation and rationale,
+and explicitly flag where your recommendation is likely to conflict with another lifecycle stage.
+
+**Six Decision Types to assess (use exact strings):**
+{json.dumps(DECISION_TYPES, indent=2)}
+
+**ESPR Regulatory Context retrieved for your lifecycle perspective:**
+{espr_context}
+
+**Output Format (JSON):**
+{AGENT_ASSESSMENT_FORMAT}
+
+You MUST produce exactly six assessment entries, one per decision type, using the exact
+decision_type strings above. Respond ONLY with valid JSON.
+"""
+
+
+prompt = f"""
+You are the Chief Designer. You have received independent assessments from four lifecycle
+specialist agents for the product: **{product}**.
+
+Each agent has reasoned independently from its own lifecycle perspective without seeing
+any other agent's output. Your task is to synthesise these into a Conceptual Design Decision Record (CDDR).
+
+**Step 1 — Conflict Detection (MANDATORY):**
+For EVERY decision type, identify where two or more agents have incompatible recommendations.
+Every decision type will contain at least one genuine conflict — examine the
+"potential_conflicts_with" fields in each agent's assessment if needed.
+
+**Step 2 — Conflict Resolution:**
+Resolve each conflict using the priority hierarchy in strict order:
+1. Engineering feasibility — a design that cannot be manufactured is rejected regardless
+2. Sustainability best practice — prefer options with lower overall lifecycle environmental impact
+3. Cost and commercial considerations — tiebreaker only
+
+**Step 3 — CDDR Production:**
+Produce the CDDR directly from your synthesis.
+
+For every decision type in the CDDR:
+- agents_in_conflict must name at least two agents
+- conflict must describe their incompatible recommendations in one specific sentence
+- chief_resolution must state the chosen option with rationale
+- consolidate all agent-suggested options into 3-4 distinct, non-overlapping choices
+- espr_constraint should be populated with the general lifecycle principle governing the
+  resolution (e.g. "Lifecycle principle: manufacturing simplicity vs end-of-life recyclability")
+  since no retrieved regulatory text is available
+
+**Independent Agent Assessments:**
+{all_assessments_text}
+
+**Output Format (JSON):**
+{CHIEF_SYNTHESIS_FORMAT}
+
+The cddr must contain EXACTLY six entries using the exact decision_type strings:
+{json.dumps(DECISION_TYPES, indent=2)}
+
+Respond ONLY with valid JSON.
+"""
