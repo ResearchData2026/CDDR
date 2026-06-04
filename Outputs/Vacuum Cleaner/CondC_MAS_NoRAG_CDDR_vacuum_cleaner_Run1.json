@@ -1,0 +1,119 @@
+{
+  "product": "vacuum cleaner",
+  "decisions": [
+    {
+      "decision_type": "Housing material and structure",
+      "options_evaluated": [
+        "Post-consumer recycled (PCR) Polypropylene (PP) monomaterial with molded-in textures",
+        "High-impact virgin ABS/PC blend with thick-walled construction",
+        "Virgin polypropylene (PP)"
+      ],
+      "agents_in_conflict": [
+        "material_design",
+        "in_service",
+        "manufacture"
+      ],
+      "conflict": "Material and Design recommends PCR PP monomaterial for circularity, whereas In-Service rejects this because PCR PP has lower impact strength and scratch resistance compared to high-impact virgin ABS/PC.",
+      "espr_constraint": [
+        "Lifecycle principle: material circularity vs mechanical durability"
+      ],
+      "chief_resolution": "Post-consumer recycled (PCR) Polypropylene (PP) monomaterial with molded-in textures. While virgin ABS/PC offers higher impact resistance, PCR PP significantly reduces the carbon footprint and is highly recyclable; mechanical durability will be addressed through structural design and ribbing.",
+      "design_action": "Investigate the mechanical properties and shrinkage rates of available PCR PP grades to determine if structural ribbing can compensate for lower tensile strength without increasing tooling reject rates."
+    },
+    {
+      "decision_type": "Joining and assembly method",
+      "options_evaluated": [
+        "Reversible snap-fits and standardized removable metal screws",
+        "Threaded fasteners with brass inserts",
+        "Ultrasonic welding and permanent chemical adhesives"
+      ],
+      "agents_in_conflict": [
+        "circularity",
+        "in_service",
+        "manufacture"
+      ],
+      "conflict": "Circularity recommends snap-fits and removable screws for easy disassembly, whereas In-Service demands threaded fasteners with brass inserts for repeated repair durability, and Manufacture prefers pure snap-fits to avoid secondary assembly steps.",
+      "espr_constraint": [
+        "Lifecycle principle: ease of disassembly vs joint durability under vibration"
+      ],
+      "chief_resolution": "Reversible snap-fits and standardized removable metal screws. This option avoids permanent metal inserts (brass) which contaminate plastic recycling streams, while still allowing non-destructive disassembly for repair, unlike pure snap-fits which are prone to breaking.",
+      "design_action": "Investigate the wear resistance of plastic screw boss designs under repeated disassembly to confirm if standardized metal screws can be used without stripping the plastic threads."
+    },
+    {
+      "decision_type": "Motor and actuator technology",
+      "options_evaluated": [
+        "Modular BLDC motor with mechanically fastened rare-earth magnets and slide-out copper stator",
+        "Synchronous reluctance motor without rare-earth magnets",
+        "Ferrite-magnet BLDC motor"
+      ],
+      "agents_in_conflict": [
+        "circularity",
+        "in_service",
+        "manufacture"
+      ],
+      "conflict": "Circularity recommends a modular BLDC motor with mechanically fastened magnets for recycling, while In-Service recommends a standard high-efficiency BLDC motor for performance, and Manufacture recommends a ferrite-magnet motor to avoid rare-earth mining impacts.",
+      "espr_constraint": [
+        "Lifecycle principle: critical raw material recovery vs use-phase energy efficiency"
+      ],
+      "chief_resolution": "Modular BLDC motor with mechanically fastened rare-earth magnets and slide-out copper stator. This ensures the high power density and efficiency required for vacuum performance (engineering feasibility) while allowing the non-destructive recovery of critical rare-earth magnets and copper at end-of-life.",
+      "design_action": "Investigate the assembly complexity and safety of mechanical fastening methods for rare-earth magnets in high-speed BLDC rotors to ensure structural integrity at operating RPMs."
+    },
+    {
+      "decision_type": "Thermal management approach",
+      "options_evaluated": [
+        "Bypass active cooling fan integrated with main suction airflow and removable aluminum fins",
+        "Passive cooling via optimized airflow channels and bio-based thermal conductive plastics",
+        "Active cooling loop with liquid coolant"
+      ],
+      "agents_in_conflict": [
+        "in_service",
+        "material_design",
+        "circularity"
+      ],
+      "conflict": "In-Service recommends an active bypass cooling fan to prevent thermal degradation of the motor, whereas Material and Circularity recommend passive cooling to reduce weight and avoid unrecyclable potting compounds.",
+      "espr_constraint": [
+        "Lifecycle principle: thermal reliability vs material simplicity"
+      ],
+      "chief_resolution": "Bypass active cooling fan integrated with main suction airflow and removable aluminum fins. Passive cooling is insufficient for high-power vacuum motors, making active cooling an engineering necessity; using removable aluminum fins avoids unrecyclable potting compounds and allows clean material separation.",
+      "design_action": "Investigate the aerodynamic design and sealing requirements of the bypass cooling duct to ensure dirty suction air does not contaminate the motor electronics."
+    },
+    {
+      "decision_type": "Modularity and repairability architecture",
+      "options_evaluated": [
+        "Modular architecture with tool-less user-replaceable battery, motor, and filter cartridges",
+        "Monolithic integrated chassis with potted electronics",
+        "Semi-modular design requiring proprietary tools"
+      ],
+      "agents_in_conflict": [
+        "manufacture",
+        "in_service",
+        "circularity"
+      ],
+      "conflict": "Manufacture recommends a monolithic integrated design to minimize tooling energy and scrap, whereas In-Service and Circularity demand a modular architecture with user-replaceable parts to facilitate repair and extend product life.",
+      "espr_constraint": [
+        "Lifecycle principle: manufacturing simplicity vs repairability and lifetime extension"
+      ],
+      "chief_resolution": "Modular architecture with tool-less user-replaceable battery, motor, and filter cartridges. Extending the product's useful life through easy repair has a significantly lower overall lifecycle environmental impact than minimizing initial manufacturing tooling complexity.",
+      "design_action": "Investigate the structural weight penalty and assembly tolerances of modular interlocking joints to ensure the vacuum maintains structural integrity and airtight seals."
+    },
+    {
+      "decision_type": "Power source and energy delivery",
+      "options_evaluated": [
+        "Removable and modular Lithium Iron Phosphate (LFP) battery pack",
+        "Corded AC power (mains) with an automatic cord reel",
+        "Integrated non-removable Lithium-ion battery pack"
+      ],
+      "agents_in_conflict": [
+        "manufacture",
+        "in_service",
+        "circularity"
+      ],
+      "conflict": "Manufacture recommends corded AC power to completely eliminate battery manufacturing footprints, whereas In-Service and Circularity recommend a removable battery pack to provide cordless portability while ensuring the battery is replaceable.",
+      "espr_constraint": [
+        "Lifecycle principle: manufacturing footprint of energy storage vs use-phase portability"
+      ],
+      "chief_resolution": "Removable and modular Lithium Iron Phosphate (LFP) battery pack. While corded power has a lower manufacturing footprint, cordless operation is a critical market requirement; LFP chemistry avoids toxic cobalt/nickel and offers a significantly longer cycle life than standard Li-ion.",
+      "design_action": "Investigate the volumetric energy density of LFP cells to determine if the battery pack size and weight remain acceptable for a handheld or stick vacuum cleaner."
+    }
+  ]
+}
