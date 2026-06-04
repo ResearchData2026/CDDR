@@ -1,0 +1,119 @@
+{
+  "product": "cordless screwdriver",
+  "decisions": [
+    {
+      "decision_type": "Housing material and structure",
+      "options_evaluated": [
+        "Glass-fiber reinforced polyamide (PA6-GF30)",
+        "Unreinforced Recycled Polycarbonate/ABS blend (rPC/ABS)",
+        "Bio-based Polylactic Acid (PLA) composite"
+      ],
+      "agents_in_conflict": [
+        "Manufacturing perspective",
+        "End-of-life perspective"
+      ],
+      "conflict": "Glass-fiber reinforcement increases housing durability during the use phase but severely degrades the recyclability of the polymer at end-of-life.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (t), page 80: lightweight design as expressed through reduction of material consumption",
+        "ESPR 2024/1781 Annex I (h), page 79: use or content of recycled materials and recovery of materials"
+      ],
+      "chief_resolution": "Select unreinforced rPC/ABS blend with a minimum of 50% recycled content. This avoids composite materials that complicate recycling while maintaining sufficient impact resistance for a cordless screwdriver, aligning with the mandate to promote recycled content and material recovery.",
+      "design_action": "Investigate the availability of high-quality, UL-certified recycled PC/ABS resin suppliers in the EU market to verify compliance with safety standards before finalizing the material specification."
+    },
+    {
+      "decision_type": "Joining and assembly method",
+      "options_evaluated": [
+        "Ultrasonic welding",
+        "Threaded fasteners (screws) with brass inserts",
+        "Snap-fits with adhesive bonding"
+      ],
+      "agents_in_conflict": [
+        "Manufacturing perspective",
+        "In-service repair perspective"
+      ],
+      "conflict": "Ultrasonic welding minimizes assembly time and manufacturing costs but prevents non-destructive disassembly for repair or component recovery.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (b), page 79: ease of repair and maintenance, including ease of non-destructive disassembly and re-assembly",
+        "ESPR 2024/1781 Annex I (e), page 79: avoidance of technical solutions detrimental to reuse, upgrading, repair, maintenance, refurbishment, remanufacturing and recycling"
+      ],
+      "chief_resolution": "Specify standard threaded fasteners (screws) with brass inserts. This ensures non-destructive disassembly and re-assembly using commonly available tools, directly supporting the repairability and maintenance requirements of Annex I (b).",
+      "design_action": "Verify the availability of standard metric screw sizes and corresponding brass inserts to minimize the variety of fasteners required for disassembly."
+    },
+    {
+      "decision_type": "Motor and actuator technology",
+      "options_evaluated": [
+        "Brushed DC motor",
+        "Brushless DC (BLDC) motor",
+        "Universal AC/DC motor"
+      ],
+      "agents_in_conflict": [
+        "Manufacturing perspective",
+        "In-service energy perspective"
+      ],
+      "conflict": "Brushed DC motors are cheaper and simpler to manufacture but suffer from lower energy efficiency and shorter technical lifetimes due to brush wear.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (a), page 79: durability and reliability of the product or its components",
+        "ESPR 2024/1781 Annex I (g), page 79: use or consumption of energy, water and other resources during the product lifecycle"
+      ],
+      "chief_resolution": "Select a Brushless DC (BLDC) motor. Although it has a higher initial material footprint, its superior energy efficiency and lack of wearing brushes significantly extend the technical lifetime and reduce in-use energy consumption.",
+      "design_action": "Check the supply chain for rare-earth magnet sourcing in the BLDC motor to evaluate the potential impact on critical raw material recovery."
+    },
+    {
+      "decision_type": "Thermal management approach",
+      "options_evaluated": [
+        "Passive cooling via optimized housing ventilation slots",
+        "Active cooling with an integrated plastic fan on the motor shaft",
+        "Phase change material (PCM) encapsulation"
+      ],
+      "agents_in_conflict": [
+        "In-service performance perspective",
+        "End-of-life perspective"
+      ],
+      "conflict": "Phase change materials provide excellent thermal regulation but introduce complex chemical mixtures that complicate material recovery and recycling at end-of-life.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (a), page 79: resistance to stresses or ageing mechanisms",
+        "ESPR 2024/1781 Annex I (e), page 79: avoidance of technical solutions detrimental to recycling of products and components"
+      ],
+      "chief_resolution": "Implement passive cooling via optimized housing ventilation slots combined with a lightweight, press-fitted fan on the motor shaft. This avoids the introduction of chemical substances of concern or complex material mixtures, facilitating clean material recovery.",
+      "design_action": "Investigate the thermal thresholds of the selected battery cells and motor to establish the minimum passive airflow area required."
+    },
+    {
+      "decision_type": "Modularity and repairability architecture",
+      "options_evaluated": [
+        "Monolithic integrated internal chassis",
+        "Modular architecture with separate battery, motor, and gear modules",
+        "Semi-modular design with soldered wire connections"
+      ],
+      "agents_in_conflict": [
+        "Manufacturing perspective",
+        "In-service repair perspective"
+      ],
+      "conflict": "A monolithic chassis reduces assembly steps and part count but forces the replacement of the entire tool if a single component like the trigger switch fails.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (b), page 79: ease of repair and maintenance as expressed through modularity and standard components",
+        "ESPR 2024/1781 Annex I (c), page 79: ease of upgrading, reuse, remanufacturing and refurbishment"
+      ],
+      "chief_resolution": "Adopt a fully modular architecture with plug-and-play connectors between the battery, motor/gearbox, and control PCB. This allows independent replacement of high-wear components, maximizing the product's technical lifetime and ease of repair.",
+      "design_action": "Check the availability and reliability of standardized, lead-free board-to-board and wire-to-board connectors that can withstand tool vibration."
+    },
+    {
+      "decision_type": "Power source and energy delivery",
+      "options_evaluated": [
+        "Integrated (non-removable) Lithium-Ion battery pack",
+        "Removable and standardized slide-on Lithium-Ion battery pack",
+        "Corded power supply with AC/DC converter"
+      ],
+      "agents_in_conflict": [
+        "In-service performance perspective",
+        "End-of-life perspective"
+      ],
+      "conflict": "An integrated battery pack allows for a more compact and lightweight tool design but leads to premature product disposal when the battery cells inevitably degrade.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (a), page 79: durability and reliability of the product or its components as expressed through technical lifetime",
+        "ESPR 2024/1781 Annex I (b), page 79: ease of repair and maintenance, including availability of spare parts"
+      ],
+      "chief_resolution": "Implement a removable, standardized slide-on battery pack. This ensures the battery can be easily replaced by the end-user when its capacity fades, preventing premature obsolescence of the entire screwdriver.",
+      "design_action": "Investigate existing industry-standard battery interfaces (such as open battery alliances) to verify compatibility and potential for cross-brand interoperability."
+    }
+  ]
+}

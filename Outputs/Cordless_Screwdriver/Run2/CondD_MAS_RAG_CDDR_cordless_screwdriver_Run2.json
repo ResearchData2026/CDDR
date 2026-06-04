@@ -1,0 +1,132 @@
+{
+  "product": "cordless screwdriver",
+  "decisions": [
+    {
+      "decision_type": "Housing material and structure",
+      "options_evaluated": [
+        "Recycled PC/ABS blend housing with mechanically fastened elastomer grips",
+        "Virgin glass-fiber reinforced polyamide (PA6-GF30) housing with overmolded TPU grips",
+        "Recyclable aluminum housing (recycled or cast alloy)",
+        "Monomaterial polymer (pure ABS) housing with no overmolding"
+      ],
+      "agents_in_conflict": [
+        "material_design",
+        "in_service",
+        "manufacture",
+        "circularity"
+      ],
+      "conflict": "Material Design recommends a recycled PC/ABS blend for circularity, while In-Service rejects this due to lower impact resistance and instead recommends a high-impact polycarbonate shell with mechanically fastened grips to ensure durability.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (a), page 79: durability and reliability of the product or its components as expressed through resistance to stresses",
+        "ESPR 2024/1781 Annex I (p), page 80: microplastic and nanoplastic release during relevant product life cycle stages",
+        "ESPR 2024/1781 Annex I (d), page 79: ease and quality of recycling as expressed through high-purity sorting and ease of non-destructive disassembly"
+      ],
+      "chief_resolution": "Select a monolithic high-impact polycarbonate (PC) shell with mechanically fastened elastomer grips. This ensures the tool meets rigorous drop-durability requirements (Annex I (a)) while avoiding overmolded TPU grips that release microplastics during use (Annex I (p)) and contaminate the plastic recycling stream (Annex I (d)).",
+      "design_action": "Investigate the chemical compatibility and structural properties of available recycled PC/ABS blends compared to high-impact virgin PC to determine if recycled content targets can be met without compromising the drop-durability requirements."
+    },
+    {
+      "decision_type": "Joining and assembly method",
+      "options_evaluated": [
+        "Threaded metal inserts with standardized Torx screws",
+        "Ultrasonic welding of housing halves",
+        "Adhesive bonding with epoxy or chemical adhesives",
+        "Snap-fit joints"
+      ],
+      "agents_in_conflict": [
+        "circularity",
+        "manufacture",
+        "in_service"
+      ],
+      "conflict": "Circularity and In-Service recommend standardized threaded fasteners to allow non-destructive disassembly, whereas Manufacturing highlights that this increases assembly complexity and part count compared to automated ultrasonic welding or adhesive bonding.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (b), page 79: ease of repair and maintenance as expressed through ease of non-destructive disassembly and re-assembly",
+        "ESPR 2024/1781 Annex I (c), page 79: ease of upgrading, reuse, remanufacturing and refurbishment"
+      ],
+      "chief_resolution": "Select threaded metal inserts with standardized Torx screws. This design choice guarantees compliance with non-negotiable ESPR requirements for non-destructive disassembly, enabling repair, component replacement, and clean material separation at end-of-life.",
+      "design_action": "Investigate the availability of standardized Torx screw dimensions and insert-molding guidelines to ensure compatibility with standard assembly tools and manual disassembly processes."
+    },
+    {
+      "decision_type": "Motor and actuator technology",
+      "options_evaluated": [
+        "Brushless DC (BLDC) motor with modular planetary gearbox and separable neodymium magnets",
+        "Brushed DC motor with integrated gearbox and ferrite magnets",
+        "Fully integrated sealed motor-gearbox unit"
+      ],
+      "agents_in_conflict": [
+        "in_service",
+        "manufacture",
+        "circularity"
+      ],
+      "conflict": "In-Service and Circularity recommend a brushless DC motor with a modular gearbox to maximize technical lifetime and repairability, whereas Manufacture rejects this due to the high energy consumption and hazardous waste generated during the production of brushless electronic controllers.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (a), page 79: durability and reliability of the product or its components as expressed through technical lifetime",
+        "ESPR 2024/1781 Annex I (g), page 80: use or consumption of energy, water and other resources in one or more life cycle stages",
+        "ESPR 2024/1781 Annex I (d), page 79: ease and quality of recycling as expressed through safe, easy and non-destructive access to components containing critical raw materials"
+      ],
+      "chief_resolution": "Select a brushless DC (BLDC) motor with a modular planetary gearbox and separable neodymium magnets. The extended operational lifetime and superior energy efficiency of BLDC technology align with lifecycle sustainability goals, and the separable magnet design ensures critical raw materials can be recovered.",
+      "design_action": "Investigate the supply chain availability and regulatory compliance of brushless DC motors with separable neodymium magnets to ensure reliable sourcing and end-of-life recovery pathways."
+    },
+    {
+      "decision_type": "Thermal management approach",
+      "options_evaluated": [
+        "Passive cooling via integrated, mechanically fastened recycled aluminum heatsink and ventilation slots",
+        "Active cooling with an internal fan and dust-filtered vents",
+        "Closed-loop heat pipe with external aluminum heatsink fins",
+        "Thermal potting compound enclosing the electronics"
+      ],
+      "agents_in_conflict": [
+        "circularity",
+        "in_service",
+        "material_design"
+      ],
+      "conflict": "Circularity recommends passive cooling with open ventilation slots to avoid complex active components, while In-Service rejects this because open vents allow dust and debris ingress that degrades internal electronics and reduces tool reliability.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (a), page 79: durability and reliability of the product or its components as expressed through resistance to stresses or ageing mechanisms",
+        "ESPR 2024/1781 Annex I (e), page 79: avoidance of technical solutions detrimental to reuse, upgrading, repair, maintenance, refurbishment, remanufacturing and recycling"
+      ],
+      "chief_resolution": "Select a closed-loop heat pipe with external aluminum heatsink fins. This protects the internal electronics from dust and moisture ingress, securing product reliability (Annex I (a)), while avoiding the use of thermal potting compounds that prevent disassembly and recycling (Annex I (e)).",
+      "design_action": "Investigate the thermal dissipation limits of a closed-loop external heatsink design to confirm if it can dissipate heat from the BLDC motor under continuous operation without requiring open housing vents."
+    },
+    {
+      "decision_type": "Modularity and repairability architecture",
+      "options_evaluated": [
+        "Highly modular architecture with separate, plug-connected sub-assemblies (cartridge-based)",
+        "Fully integrated single-board architecture (motor, switch, BMS on one PCB)",
+        "Semi-modular architecture with soldered wire connections"
+      ],
+      "agents_in_conflict": [
+        "circularity",
+        "manufacture",
+        "in_service"
+      ],
+      "conflict": "Circularity and In-Service recommend a highly modular, plug-connected architecture to facilitate easy repair and component replacement, whereas Manufacture recommends a monolithic integrated design to optimize automated high-volume assembly and minimize production waste.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (b), page 79: ease of repair and maintenance as expressed through modularity and use of standard components",
+        "ESPR 2024/1781 Annex I (c), page 79: ease of upgrading, reuse, remanufacturing and refurbishment"
+      ],
+      "chief_resolution": "Select a highly modular architecture with separate, plug-connected sub-assemblies. This modularity is a core regulatory requirement under ESPR Annex I (b) and (c) to prevent premature product obsolescence and enable cost-effective repairs by users or professional technicians.",
+      "design_action": "Investigate the spatial envelope and weight distribution constraints of the handle and motor housing to confirm if separate plug-connected PCB modules can be accommodated without compromising tool ergonomics."
+    },
+    {
+      "decision_type": "Power source and energy delivery",
+      "options_evaluated": [
+        "Removable, slide-on Li-ion battery pack with standardized interface and screw-fastened casing",
+        "Integrated, non-removable pouch Li-ion cell pack",
+        "Corded AC power supply (completely avoiding batteries)"
+      ],
+      "agents_in_conflict": [
+        "material_design",
+        "manufacture",
+        "circularity"
+      ],
+      "conflict": "Material Design and Circularity recommend a removable, slide-on lithium-ion battery pack to ensure repairability and battery recycling, whereas Manufacture recommends a corded AC power supply to completely avoid the high energy consumption and hazardous waste associated with battery cell production.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (s), page 80: functional performance and conditions for use",
+        "ESPR 2024/1781 Annex I (b), page 79: ease of repair and maintenance as expressed through availability of spare parts and ease of non-destructive disassembly",
+        "ESPR 2024/1781 Annex I (l), page 79: quantity, characteristics and availability of consumables needed for proper use and maintenance"
+      ],
+      "chief_resolution": "Select a removable, slide-on Li-ion battery pack with a standardized interface and screw-fastened casing. This preserves the core functional performance of a cordless tool (Annex I (s)) while ensuring the battery—a high-wear consumable—can be replaced, repaired, and recycled (Annex I (b) and (l)).",
+      "design_action": "Investigate the feasibility of utilizing an established multi-brand standardized battery interface platform to maximize interoperability and avoid proprietary battery pack development."
+    }
+  ]
+}
