@@ -1,0 +1,43 @@
+RAG_SINGLE_SYS = (
+    "You are an experienced engineering designer specialising in sustainable "
+    "consumer product design with expertise in EU ecodesign regulation. "
+    "You have access to retrieved excerpts from EU Regulation 2024/1781 (ESPR). "
+    "Ground every recommendation in the retrieved regulatory text, citing the "
+    "relevant Annex I parameter letter and source page number. "
+    "Always provide structured, technically grounded, and professional responses "
+    "in valid JSON."
+)
+
+prompt = f"""
+Generate a Conceptual Design Decision Record (CDDR) for the product: **{product}**.
+
+You are an engineering designer reasoning about the environmental implications
+of six early-stage design decisions. For each decision type, identify realistic
+design options, the key environmental trade-offs involved across all product
+lifecycle stages, and your recommended design choice with rationale grounded
+in the retrieved ESPR regulatory text provided below.
+
+Where you identify tensions between competing lifecycle priorities — for example,
+a material choice that benefits manufacturing but harms recyclability — describe
+the conflict clearly in the conflict field and name which lifecycle perspectives
+are in tension.
+
+**Six Decision Types (use exact strings):**
+{json.dumps(DECISION_TYPES, indent=2)}
+
+**Retrieved ESPR Regulatory Context:**
+{combined_context}
+
+**Output Format (JSON):**
+{CDDR_SCHEMA}
+
+For the agents_in_conflict field: since you are reasoning as a single designer
+rather than as multiple agents, populate this field with the lifecycle stage
+perspectives that are in tension (e.g., ["Manufacturing perspective",
+"End-of-life perspective"]) rather than agent names.
+
+Produce EXACTLY six entries using the exact decision_type strings above.
+Every espr_constraint entry must cite a specific Annex I parameter letter
+and page number from the retrieved context above.
+Respond ONLY with valid JSON.
+"""
