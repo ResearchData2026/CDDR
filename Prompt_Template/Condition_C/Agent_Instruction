@@ -99,3 +99,36 @@ AGENT_ASSESSMENT_FORMAT = """
 """
     ),
 }
+
+
+CHIEF_SYNTHESIS_FORMAT = """
+{
+  "trade_offs": [
+    {
+      "decision_type": "<which of the six decision types>",
+      "conflict": "<description of the disagreement between agents>",
+      "agents_involved": ["<Agent 1>", "<Agent 2>"],
+      "decision": "<what the Chief Designer decided>",
+      "rationale": "<why, grounded in the priority hierarchy and ESPR text>",
+      "espr_citation": "<ESPR 2024/1781 Annex I (x), page Y>"
+    }
+  ],
+  "cddr": {
+    "product": "<product name>",
+    "decisions": [
+      {
+        "decision_type": "<exactly one of the six canonical decision types>",
+        "options_evaluated": ["<option 1>", "<option 2>", "<option 3>"],
+        "agents_in_conflict": ["<Agent 1>", "<Agent 2>"],
+        "conflict": "<one sentence: Agent X recommends Y; Agent Z rejects this because W>",
+        "espr_constraint": [
+          "<ESPR 2024/1781 Annex I (x), page Y: short clause description>",
+          "<ESPR 2024/1781 Annex I (y), page Y: short clause description>"
+        ],
+        "chief_resolution": "<recommended design choice with rationale>",
+        "design_action": "<conceptual design action: what needs to be investigated, verified, or checked before detailed design activities begin. Do NOT suggest detail design activities such as simulation, prototyping, or testing>"
+      }
+    ]
+  }
+}
+"""
