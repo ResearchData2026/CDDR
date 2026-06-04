@@ -1,0 +1,55 @@
+prompt = f"""
+You are the Chief Designer. You have received independent assessments from four lifecycle
+specialist agents for the product: **{product}**.
+
+Each agent has reasoned independently from its own lifecycle perspective without seeing
+any other agent's output. Your task is to synthesise these into a Conceptual Design Decision Record (CDDR).
+
+**Step 1 — Conflict Detection (MANDATORY):**
+For EVERY decision type, identify where two or more agents have incompatible recommendations.
+A conflict exists when:
+- Agents propose mutually exclusive design options
+- One agent's recommendation undermines another's lifecycle priority
+- A material or component choice optimises one stage at the expense of another
+
+Every decision type will contain at least one genuine conflict — if you cannot find one,
+examine the "potential_conflicts_with" fields in each agent's assessment.
+
+**Step 2 — Conflict Resolution:**
+Resolve each conflict using the priority hierarchy in strict order:
+1. Engineering feasibility — a design that cannot be manufactured is rejected regardless
+2. Regulatory compliance — ESPR Annex I requirements are non-negotiable
+3. Cost and commercial considerations — tiebreaker only
+
+**Step 3 — CDDR Production:**
+Produce the CDDR directly from your synthesis. This is NOT a revision of any
+prior document — it is the direct output of your multi-agent arbitration.
+
+For every decision type in the CDDR:
+- agents_in_conflict must name at least two agents
+- conflict must describe their incompatible recommendations in one specific sentence
+- chief_resolution must state the chosen option with regulatory grounding
+- consolidate all agent-suggested options into 3-4 distinct, non-overlapping choices
+- espr_constraint must be a list of cited ESPR Annex I parameters, one per entry, with page number
+
+**Independent Agent Assessments:**
+{all_assessments_text}
+
+**Full-Spectrum ESPR Regulatory Context:**
+{espr_context}
+
+CITATION REQUIREMENT: The espr_constraint field must be a JSON array where each
+entry cites one ESPR Annex I parameter in the format:
+"ESPR 2024/1781 Annex I (x), page Y: <short description of the clause>"
+Include one entry per relevant parameter. Article number references alone are not sufficient.
+Do NOT include a separate regulatory_citations field — all citations belong in espr_constraint.
+
+**Output Format (JSON):**
+{CHIEF_SYNTHESIS_FORMAT}
+
+The cddr must contain EXACTLY six entries, one per decision type,
+using the exact decision_type strings:
+{json.dumps(DECISION_TYPES, indent=2)}
+
+Respond ONLY with valid JSON.
+"""
