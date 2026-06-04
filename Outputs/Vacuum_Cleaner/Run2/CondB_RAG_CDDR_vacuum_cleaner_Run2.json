@@ -1,0 +1,119 @@
+{
+  "product": "vacuum cleaner",
+  "decisions": [
+    {
+      "decision_type": "Housing material and structure",
+      "options_evaluated": [
+        "Post-consumer recycled ABS (PCR-ABS)",
+        "Virgin Polycarbonate (PC)",
+        "Bio-based Polylactic Acid (PLA)"
+      ],
+      "agents_in_conflict": [
+        "Manufacturing perspective",
+        "In-service perspective"
+      ],
+      "conflict": "Using post-consumer recycled ABS reduces the product's material footprint but may exhibit lower impact resistance under drop stresses compared to virgin PC, potentially compromising the vacuum's structural durability.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (h), page 79: use or content of recycled materials",
+        "ESPR 2024/1781 Annex I (a), page 79: resistance to stresses or ageing mechanisms"
+      ],
+      "chief_resolution": "Select high-quality PCR-ABS optimized with internal structural ribbing to satisfy both recycled content goals and drop-test durability requirements without increasing overall wall thickness.",
+      "design_action": "Verify the availability of certified PCR-ABS resins that meet strict chemical safety standards and check the feasibility of integrating structural ribbing to optimize load distribution."
+    },
+    {
+      "decision_type": "Joining and assembly method",
+      "options_evaluated": [
+        "Ultrasonic welding",
+        "Threaded metal fasteners and snap-fits",
+        "Polyurethane chemical adhesives"
+      ],
+      "agents_in_conflict": [
+        "Manufacturing perspective",
+        "End-of-life perspective"
+      ],
+      "conflict": "Ultrasonic welding reduces manufacturing assembly time and product weight but prevents non-destructive disassembly, making repair and material recycling impossible.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (b), page 79: ease of non-destructive disassembly and re-assembly",
+        "ESPR 2024/1781 Annex I (e), page 79: avoidance of technical solutions detrimental to recycling"
+      ],
+      "chief_resolution": "Utilize a combination of standardized threaded metal fasteners and mechanical snap-fits to enable straightforward, non-destructive disassembly for repair and end-of-life material separation.",
+      "design_action": "Investigate the spatial layout to minimize the number of unique screw heads and check the compatibility of snap-fit geometries with standard manual disassembly tools."
+    },
+    {
+      "decision_type": "Motor and actuator technology",
+      "options_evaluated": [
+        "High-efficiency Brushless DC (BLDC) motor",
+        "Traditional brushed AC motor",
+        "Synchronous reluctance motor (magnet-free)"
+      ],
+      "agents_in_conflict": [
+        "In-service perspective",
+        "End-of-life perspective"
+      ],
+      "conflict": "A BLDC motor maximizes energy efficiency and operational lifetime but relies on critical rare-earth permanent magnets that are highly resource-intensive to extract and difficult to recover at end-of-life.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (g), page 79: use or consumption of energy",
+        "ESPR 2024/1781 Annex I (h), page 79: recovery of materials, including critical raw materials"
+      ],
+      "chief_resolution": "Specify the high-efficiency BLDC motor to minimize use-phase energy consumption, but design the motor housing as an easily extractable, modular sub-assembly to facilitate critical raw material recovery.",
+      "design_action": "Verify that the motor assembly can be isolated from the main housing in under one minute using common workshop tools."
+    },
+    {
+      "decision_type": "Thermal management approach",
+      "options_evaluated": [
+        "Active bypass airflow cooling",
+        "Passive aluminum heat sinking",
+        "Thermally conductive over-molded plastics"
+      ],
+      "agents_in_conflict": [
+        "In-service perspective",
+        "Manufacturing perspective"
+      ],
+      "conflict": "Active bypass airflow cooling provides superior thermal regulation for the motor but risks drawing in fine dust that can clog components and lead to premature motor failure, whereas passive heat sinking is highly reliable but adds significant weight and material footprint.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (a), page 79: durability and reliability of the product or its components",
+        "ESPR 2024/1781 Annex I (j), page 79: weight and volume of the product"
+      ],
+      "chief_resolution": "Implement active bypass cooling to minimize weight and volume, but protect the motor chamber with an easily accessible, washable, and reusable pre-motor filter to ensure long-term reliability.",
+      "design_action": "Check the availability of standard washable filter media and verify that the filter housing design allows for tool-less removal by the end-user."
+    },
+    {
+      "decision_type": "Modularity and repairability architecture",
+      "options_evaluated": [
+        "Fully modular cartridge-based architecture",
+        "Monolithic integrated chassis",
+        "Semi-modular architecture with separate motor and battery pods"
+      ],
+      "agents_in_conflict": [
+        "In-service perspective",
+        "Manufacturing perspective"
+      ],
+      "conflict": "A fully modular cartridge-based design simplifies repair and component replacement but increases the overall weight, volume, and plastic consumption of the vacuum cleaner housing.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (b), page 79: ease of repair and maintenance, modularity",
+        "ESPR 2024/1781 Annex I (t), page 80: lightweight design and reduction of material consumption"
+      ],
+      "chief_resolution": "Adopt a semi-modular architecture that groups high-wear components (the battery pack and the motor assembly) into distinct, easily accessible pods while keeping the main structural chassis monolithic to balance lightweighting and repairability.",
+      "design_action": "Investigate the physical boundaries between the electrical, mechanical, and filtration systems to define the optimal layout for the modular pods."
+    },
+    {
+      "decision_type": "Power source and energy delivery",
+      "options_evaluated": [
+        "Cordless rechargeable Lithium-Ion battery pack",
+        "Corded AC mains power supply",
+        "Cordless rechargeable Lithium Iron Phosphate (LFP) battery pack"
+      ],
+      "agents_in_conflict": [
+        "In-service perspective",
+        "End-of-life perspective"
+      ],
+      "conflict": "A cordless Lithium-Ion battery pack maximizes user convenience and portability but suffers from capacity degradation over time, leading to premature product obsolescence and hazardous battery waste, whereas corded power has an infinite lifetime but limits functional usability.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (a), page 79: technical lifetime and resistance to ageing",
+        "ESPR 2024/1781 Annex I (r), page 80: amounts of waste generated, including hazardous waste"
+      ],
+      "chief_resolution": "Select a cordless Lithium-Ion battery pack but design it as a user-replaceable, tool-less click-in module equipped with a smart battery management system to prevent premature obsolescence and ensure safe, localized recycling.",
+      "design_action": "Verify the mechanical latching interface of the click-in battery pack to ensure it can be easily detached and replaced by the consumer without specialized tools."
+    }
+  ]
+}

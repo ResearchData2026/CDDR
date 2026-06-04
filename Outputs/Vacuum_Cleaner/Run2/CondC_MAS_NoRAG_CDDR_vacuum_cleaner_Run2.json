@@ -1,0 +1,113 @@
+{
+  "product": "vacuum cleaner",
+  "decisions": [
+    {
+      "decision_type": "Housing material and structure",
+      "options_evaluated": [
+        "High-impact virgin ABS/Polycarbonate blend with thick walls",
+        "Monomaterial post-consumer recycled polypropylene (PCR-PP) without overmolding",
+        "Bio-based PLA composite with glass fiber reinforcement"
+      ],
+      "agents_in_conflict": [
+        "In-Service Agent",
+        "Circularity Agent"
+      ],
+      "conflict": "In-Service Agent recommends virgin ABS/PC for high durability and impact resistance, while Circularity Agent rejects this because it introduces non-recyclable polymer blends and lacks recycled content.",
+      "espr_constraint": [
+        "Lifecycle principle: material durability vs. end-of-life recyclability"
+      ],
+      "chief_resolution": "Monomaterial post-consumer recycled polypropylene (PCR-PP) without overmolding, using optimized wall thickness and internal ribbing to achieve the required structural integrity.",
+      "design_action": "Investigate the mechanical properties and shrinkage rates of available PCR-PP grades to confirm structural suitability for vacuum cleaner housings."
+    },
+    {
+      "decision_type": "Joining and assembly method",
+      "options_evaluated": [
+        "Ultrasonic welding and permanent chemical adhesives",
+        "Reversible mechanical fasteners (standardized metal screws and snap-fits)",
+        "Threaded fasteners with brass/metal inserts"
+      ],
+      "agents_in_conflict": [
+        "Manufacture Agent",
+        "Circularity Agent"
+      ],
+      "conflict": "Manufacture Agent recommends ultrasonic welding to minimize assembly time, while Circularity Agent rejects this because it creates permanent bonds that prevent non-destructive disassembly and material recovery.",
+      "espr_constraint": [
+        "Lifecycle principle: manufacturing simplicity vs. ease of disassembly and repair"
+      ],
+      "chief_resolution": "Reversible mechanical fasteners (standardized metal screws and snap-fits) to ensure non-destructive disassembly for repair and recycling.",
+      "design_action": "Investigate the compatibility of standardized screw sizes across all structural joints to minimize tool requirements for disassembly."
+    },
+    {
+      "decision_type": "Motor and actuator technology",
+      "options_evaluated": [
+        "Standard brushed DC motor with heavy copper windings",
+        "High-efficiency BLDC motor with rare-earth magnets designed for non-destructive extraction",
+        "Synchronous reluctance motor without permanent rare-earth magnets"
+      ],
+      "agents_in_conflict": [
+        "In-Service Agent",
+        "Material and Design Agent"
+      ],
+      "conflict": "In-Service Agent recommends a high-efficiency BLDC motor for superior suction and energy efficiency, while Material and Design Agent rejects this due to the high environmental footprint and toxicity of rare-earth magnet extraction.",
+      "espr_constraint": [
+        "Lifecycle principle: operational energy efficiency vs. critical raw material recovery"
+      ],
+      "chief_resolution": "High-efficiency BLDC motor designed for non-destructive magnet and bearing extraction, balancing operational efficiency with end-of-life material recovery.",
+      "design_action": "Investigate the market availability of modular BLDC motors that allow clean separation of rotor magnets and copper windings."
+    },
+    {
+      "decision_type": "Thermal management approach",
+      "options_evaluated": [
+        "Passive cooling via integrated airflow channels and detachable aluminum heatsinks",
+        "Active cooling with a dedicated filtered auxiliary cooling fan",
+        "Encapsulated electronics in thermally conductive epoxy resins (potting)"
+      ],
+      "agents_in_conflict": [
+        "In-Service Agent",
+        "Material and Design Agent"
+      ],
+      "conflict": "In-Service Agent recommends a dedicated filtered auxiliary cooling fan to prevent motor burnout, while Material and Design Agent rejects this because it increases product weight, volume, and material footprint.",
+      "espr_constraint": [
+        "Lifecycle principle: active component reliability vs. material minimization"
+      ],
+      "chief_resolution": "Passive cooling via optimized airflow channels and detachable aluminum heatsinks, supplemented by a thermal cut-off switch for safety.",
+      "design_action": "Investigate the thermal limits of the selected motor technology to determine the minimum ventilation area required for passive cooling."
+    },
+    {
+      "decision_type": "Modularity and repairability architecture",
+      "options_evaluated": [
+        "Monolithic integrated single-unit chassis",
+        "Modular cartridge design with easily separable functional blocks (motor, battery, filtration)",
+        "Semi-modular architecture requiring standard tools"
+      ],
+      "agents_in_conflict": [
+        "Manufacture Agent",
+        "Circularity Agent"
+      ],
+      "conflict": "Manufacture Agent recommends a monolithic integrated design to simplify assembly and reduce production waste, while Circularity Agent rejects this because it prevents component-level repair and refurbishment.",
+      "espr_constraint": [
+        "Lifecycle principle: manufacturing waste reduction vs. product life extension"
+      ],
+      "chief_resolution": "Modular cartridge design with easily separable functional blocks, ensuring that high-wear components can be replaced independently.",
+      "design_action": "Investigate the interface requirements between major functional blocks to ensure robust electrical and mechanical connections without adding excessive weight."
+    },
+    {
+      "decision_type": "Power source and energy delivery",
+      "options_evaluated": [
+        "Corded AC power supply with integrated cable reel",
+        "Removable, modular Li-ion battery pack with toolless release",
+        "Integrated (non-removable) Li-ion battery pack"
+      ],
+      "agents_in_conflict": [
+        "Circularity Agent",
+        "Material and Design Agent"
+      ],
+      "conflict": "Circularity Agent recommends a removable, modular Li-ion battery pack for cordless convenience and modular recycling, while Material and Design Agent rejects this due to the high environmental footprint and hazardous substances associated with battery chemistry.",
+      "espr_constraint": [
+        "Lifecycle principle: cordless user convenience vs. battery-induced environmental footprint"
+      ],
+      "chief_resolution": "Corded AC power supply with integrated cable reel, which completely avoids battery degradation and hazardous material use.",
+      "design_action": "Investigate user mobility requirements and cable reel mechanisms to maximize the reach and usability of the corded design."
+    }
+  ]
+}
