@@ -1,7 +1,7 @@
 Overview
 The framework applies a multi-agent LLM system to support environmental reasoning at the conceptual design stage of consumer product design. Four lifecycle-specialist agents — Material and Design, Manufacture, In-Service, and Circularity — reason independently from agent-scoped retrieval-augmented generation (RAG) grounded in EU Regulation 2024/1781 (ESPR). A Design Synthesiser Agent detects and resolves inter-stage conflicts using an explicit priority hierarchy, producing a Conceptual Design Decision Record (CDDR) as the primary output artefact.
 
-The framework is demonstrated on two products:
+The framework is demonstrated on two products and three runs each:
 Vacuum cleaner
 Cordless screwdriver
 
