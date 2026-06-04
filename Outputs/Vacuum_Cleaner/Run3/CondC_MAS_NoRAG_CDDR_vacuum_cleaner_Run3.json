@@ -1,0 +1,124 @@
+{
+  "product": "vacuum cleaner",
+  "decisions": [
+    {
+      "decision_type": "Housing material and structure",
+      "options_evaluated": [
+        "Virgin ABS with overmolded TPE",
+        "Post-consumer recycled (PCR) Polypropylene (PP) with monomaterial design and structural ribs",
+        "High-impact virgin ABS/PC blend with internal structural ribbing"
+      ],
+      "agents_in_conflict": [
+        "Material and Design Agent",
+        "Manufacture Agent",
+        "Circularity Agent",
+        "In-Service Agent"
+      ],
+      "conflict": "Material and Design, Manufacture, and Circularity agents recommend recycled monomaterial Polypropylene to maximize recyclability and lower carbon footprint, whereas the In-Service agent rejects this in favor of virgin ABS/PC to ensure impact durability and prevent suction leaks.",
+      "espr_constraint": [
+        "Lifecycle principle: material durability vs end-of-life recyclability and recycled content"
+      ],
+      "chief_resolution": "Monomaterial Post-Consumer Recycled (PCR) Polypropylene (PP) with structural ribs.",
+      "design_action": "Investigate the availability of PCR PP suppliers capable of meeting structural and aesthetic requirements."
+    },
+    {
+      "decision_type": "Joining and assembly method",
+      "options_evaluated": [
+        "Reversible mechanical fasteners (standardized screws with threaded metal inserts)",
+        "Molded-in snap-fit joints without metal inserts",
+        "Permanent adhesive bonding and ultrasonic welding"
+      ],
+      "agents_in_conflict": [
+        "Manufacture Agent",
+        "Material and Design Agent",
+        "In-Service Agent",
+        "Circularity Agent"
+      ],
+      "conflict": "The Manufacture agent recommends direct snap-fit joints to eliminate fasteners and simplify assembly, while the Material and Design, In-Service, and Circularity agents reject this because snap-fits are highly prone to breaking during repair and EOL disassembly, advocating for reversible mechanical fasteners.",
+      "espr_constraint": [
+        "Lifecycle principle: manufacturing simplicity vs ease of disassembly and repairability"
+      ],
+      "chief_resolution": "Reversible mechanical fasteners (standardized screws with threaded metal inserts).",
+      "design_action": "Confirm the standardization of screw thread sizes and insert specifications across the assembly."
+    },
+    {
+      "decision_type": "Motor and actuator technology",
+      "options_evaluated": [
+        "High-efficiency modular Brushless DC (BLDC) motor with easily extractable neodymium magnets",
+        "Rare-earth-free synchronous reluctance motor with recycled copper windings",
+        "Standard brushed DC motor"
+      ],
+      "agents_in_conflict": [
+        "Material and Design Agent",
+        "Manufacture Agent",
+        "In-Service Agent",
+        "Circularity Agent"
+      ],
+      "conflict": "Material and Design and Manufacture agents recommend a rare-earth-free synchronous reluctance motor to avoid critical raw materials and manufacturing emissions, whereas In-Service and Circularity agents recommend a high-efficiency BLDC motor to ensure high suction efficiency and durability during the use phase.",
+      "espr_constraint": [
+        "Lifecycle principle: critical raw material reduction vs use-phase energy efficiency and performance"
+      ],
+      "chief_resolution": "High-efficiency modular Brushless DC (BLDC) motor with easily extractable neodymium magnets.",
+      "design_action": "Investigate the supply chain for modular BLDC motors with easily extractable magnet assemblies."
+    },
+    {
+      "decision_type": "Thermal management approach",
+      "options_evaluated": [
+        "Forced-air cooling using main suction airflow with open, conformal-coated PCBs and washable filters",
+        "Active cooling with auxiliary fan, recycled aluminum heatsinks, and potted electronics",
+        "Passive cooling via high-thermal-conductivity bio-composite housing"
+      ],
+      "agents_in_conflict": [
+        "Manufacture Agent",
+        "Circularity Agent",
+        "In-Service Agent",
+        "Material and Design Agent"
+      ],
+      "conflict": "Manufacture and Circularity agents recommend using the main aerodynamic suction airflow for cooling to eliminate extra components and potting, whereas In-Service and Material and Design agents recommend an active cooling fan with dedicated heatsinks and filters to prevent motor overheating when the main suction path is clogged.",
+      "espr_constraint": [
+        "Lifecycle principle: material minimization vs thermal reliability and component protection"
+      ],
+      "chief_resolution": "Forced-air cooling using main suction airflow with open, conformal-coated PCBs and washable filters.",
+      "design_action": "Verify the thermal limits of conformal coatings and the filtration efficiency of washable filters under bypass airflow conditions."
+    },
+    {
+      "decision_type": "Modularity and repairability architecture",
+      "options_evaluated": [
+        "Fully modular architecture with plug-and-play functional modules (motor, cord reel, electronics)",
+        "Semi-modular design with soldered wire connections and integrated motor-fan assembly",
+        "Monolithic integrated design with non-replaceable components"
+      ],
+      "agents_in_conflict": [
+        "Manufacture Agent",
+        "Material and Design Agent",
+        "In-Service Agent",
+        "Circularity Agent"
+      ],
+      "conflict": "The Manufacture agent recommends a monolithic integrated design to minimize production complexity and assembly waste, while Material and Design, In-Service, and Circularity agents demand a fully modular, plug-and-play architecture to enable easy repair, component swapping, and EOL recycling.",
+      "espr_constraint": [
+        "Lifecycle principle: manufacturing simplicity vs product lifetime extension and repairability"
+      ],
+      "chief_resolution": "Fully modular architecture with plug-and-play functional modules.",
+      "design_action": "Investigate the availability and cost of standardized plug-and-play electrical connectors for modular sub-assemblies."
+    },
+    {
+      "decision_type": "Power source and energy delivery",
+      "options_evaluated": [
+        "Corded AC power with a user-replaceable heavy-duty power cord (manual wrap)",
+        "Corded AC power with an automatic mechanical cord reel",
+        "User-removable, standardized Lithium-ion battery pack"
+      ],
+      "agents_in_conflict": [
+        "Material and Design Agent",
+        "In-Service Agent",
+        "Manufacture Agent"
+      ],
+      "conflict": "The Material and Design agent recommends a corded AC power system with an automatic cord reel to improve storage convenience, whereas In-Service and Manufacture agents reject this mechanism due to its high failure rate and manufacturing complexity, preferring a simple, user-replaceable heavy-duty power cord.",
+      "espr_constraint": [
+        "Lifecycle principle: user convenience mechanisms vs mechanical reliability and repairability"
+      ],
+      "chief_resolution": "Corded AC power with a user-replaceable heavy-duty power cord (manual wrap).",
+      "design_action": "Investigate user acceptance and regulatory requirements for manual cord storage options."
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "product": "vacuum cleaner",
+  "decisions": [
+    {
+      "decision_type": "Housing material and structure",
+      "options_evaluated": [
+        "Virgin ABS plastic",
+        "Recycled Polypropylene (rPP)",
+        "Bio-composite (wood-fiber filled PLA)"
+      ],
+      "agents_in_conflict": [
+        "Manufacturing perspective",
+        "In-service perspective"
+      ],
+      "conflict": "Recycled Polypropylene reduces the carbon footprint and material footprint during manufacturing but might suffer from lower impact resistance, risking premature failure during the use phase.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (h), page 79: use or content of recycled materials",
+        "ESPR 2024/1781 Annex I (t), page 80: lightweight design as expressed through reduction of material consumption"
+      ],
+      "chief_resolution": "Select recycled Polypropylene (rPP) optimized with structural ribbing. This aligns with Annex I (h) on recycled content and Annex I (t) on lightweight design, reducing material footprint while maintaining structural integrity.",
+      "design_action": "Investigate the supply chain availability and mechanical specification sheets of high-grade post-consumer recycled polypropylene resins to ensure they meet minimum impact resistance requirements."
+    },
+    {
+      "decision_type": "Joining and assembly method",
+      "options_evaluated": [
+        "Ultrasonic welding",
+        "Snap-fits with integrated release tabs",
+        "Threaded metal inserts with standard screws"
+      ],
+      "agents_in_conflict": [
+        "Manufacturing perspective",
+        "End-of-life perspective"
+      ],
+      "conflict": "Ultrasonic welding minimizes assembly time and material weight but permanently seals the housing, making non-destructive disassembly and repair impossible.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (b), page 79: ease of repair and maintenance, ease of non-destructive disassembly and re-assembly",
+        "ESPR 2024/1781 Annex I (e), page 79: avoidance of technical solutions detrimental to reuse, upgrading, repair, maintenance, refurbishment, remanufacturing and recycling"
+      ],
+      "chief_resolution": "Recommend threaded fasteners with standard screw heads (e.g., Torx or Philips) and metal inserts. This directly supports Annex I (b) by enabling non-destructive disassembly and re-assembly for repair and recycling, avoiding permanent welding.",
+      "design_action": "Verify the compatibility of standard screw types across all housing joints to minimize the variety of tools required for disassembly."
+    },
+    {
+      "decision_type": "Motor and actuator technology",
+      "options_evaluated": [
+        "Brushed DC motor",
+        "Brushless DC (BLDC) motor",
+        "High-efficiency AC induction motor"
+      ],
+      "agents_in_conflict": [
+        "Manufacturing perspective",
+        "In-service perspective"
+      ],
+      "conflict": "Brushed DC motors are cheap and simple to manufacture with fewer electronic components but have a shorter technical lifetime due to brush wear and lower energy efficiency during use.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (a), page 79: durability and reliability of the product or its components as expressed through technical lifetime",
+        "ESPR 2024/1781 Annex I (g), page 79: use or consumption of energy, water and other resources in one or more lifecycle stages"
+      ],
+      "chief_resolution": "Select a high-efficiency Brushless DC (BLDC) motor. This choice optimizes energy efficiency during the use phase under Annex I (g) and dramatically extends the technical lifetime and reliability under Annex I (a) due to the absence of wearing brushes.",
+      "design_action": "Investigate the availability of standardized BLDC motor form factors from suppliers to ensure future component interchangeability."
+    },
+    {
+      "decision_type": "Thermal management approach",
+      "options_evaluated": [
+        "Active cooling with dedicated auxiliary fan",
+        "Passive cooling via optimized ventilation slots and internal heat sinks",
+        "Air-path cooling (routing suction airflow over the motor)"
+      ],
+      "agents_in_conflict": [
+        "Manufacturing perspective",
+        "In-service perspective"
+      ],
+      "conflict": "Air-path cooling uses the vacuum's suction air to cool the motor, saving weight and space, but risks motor contamination and catastrophic failure if the dust filtration system leaks.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (a), page 79: durability and reliability of the product or its components, resistance to stresses or ageing mechanisms",
+        "ESPR 2024/1781 Annex I (q), page 80: emissions to air, water or soil released in one or more lifecycle stages of the product, including noise"
+      ],
+      "chief_resolution": "Implement a dual-chamber passive cooling design with optimized ventilation slots separate from the main suction air-path. This protects the motor from fine dust ingress, enhancing durability under Annex I (a), and reduces noise emissions under Annex I (q).",
+      "design_action": "Review the thermal limits of the selected motor against the expected heat dissipation of the passive venting geometry."
+    },
+    {
+      "decision_type": "Modularity and repairability architecture",
+      "options_evaluated": [
+        "Monolithic integrated chassis",
+        "Modular cartridge-based architecture (separate motor, battery, and filtration modules)",
+        "Semi-modular layout with wired connections"
+      ],
+      "agents_in_conflict": [
+        "In-service perspective",
+        "Manufacturing perspective"
+      ],
+      "conflict": "A modular cartridge-based architecture makes replacing individual failed parts incredibly easy for consumers but increases the overall weight, volume, and material footprint due to extra housing walls.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (b), page 79: ease of repair and maintenance, modularity, compatibility with commonly available tools",
+        "ESPR 2024/1781 Annex I (j), page 79: weight and volume of the product and its packaging"
+      ],
+      "chief_resolution": "Adopt a modular cartridge-based architecture where the battery, motor, and filter are separate, easily swappable modules. The repairability benefits under Annex I (b) outweigh the slight weight increase, preventing premature product disposal.",
+      "design_action": "Investigate the physical space requirements and layout of the modular cartridges to ensure they can be accessed without removing unrelated components."
+    },
+    {
+      "decision_type": "Power source and energy delivery",
+      "options_evaluated": [
+        "Mains-powered corded AC",
+        "Cordless with integrated lithium-ion battery pack",
+        "Cordless with standardized, user-replaceable battery pack"
+      ],
+      "agents_in_conflict": [
+        "In-service perspective",
+        "End-of-life perspective"
+      ],
+      "conflict": "Cordless battery-powered vacuums offer high user convenience but suffer from limited battery lifespans, creating hazardous waste and requiring replacement, whereas corded models have unlimited runtime and lower material footprint.",
+      "espr_constraint": [
+        "ESPR 2024/1781 Annex I (g), page 79: use or consumption of energy... effect of physical factors on product efficiency",
+        "ESPR 2024/1781 Annex I (r), page 80: amounts of waste generated, including plastic waste... and amounts of hazardous waste generated"
+      ],
+      "chief_resolution": "Choose a cordless design utilizing a standardized, user-replaceable battery pack with a digital battery management system. This minimizes hazardous waste generation under Annex I (r) by allowing the battery to be replaced independently of the vacuum, while maintaining energy efficiency under Annex I (g).",
+      "design_action": "Check the mechanical and electrical interface standards of major open-battery alliances to ensure compatibility with widely available consumer battery packs."
+    }
+  ]
+}
