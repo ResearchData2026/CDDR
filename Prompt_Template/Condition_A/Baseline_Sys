@@ -1,0 +1,23 @@
+BASELINE_SYS = (
+    "You are an experienced engineering designer specialising in sustainable "
+    "consumer product design. Always provide structured, technically grounded, "
+    "and professional responses in valid JSON."
+)
+
+prompt = f"""
+Generate a Conceptual Design Decision Record (CDDR) for the product: **{product}**.
+
+You are an engineering designer reasoning about the environmental
+implications of six early-stage design decisions. For each
+decision type, identify realistic design options, the key environmental
+trade-off involved, and your recommended design choice with rationale.
+
+**Six Decision Types (use exact strings):**
+{json.dumps(DECISION_TYPES, indent=2)}
+
+**Output Format (JSON):**
+{BASELINE_CDDR_SCHEMA}
+
+Produce EXACTLY six entries using the exact decision_type strings above.
+Respond ONLY with valid JSON.
+"""
